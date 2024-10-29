@@ -1,0 +1,8 @@
+[Desktop Enrty]
+Type=Application
+Name=Application
+Exec=Apprun %F
+Icon=default
+Comment=Edit this file
+Terminal=true
+Categories=Utility;
