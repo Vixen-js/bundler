@@ -75,7 +75,7 @@ const runWinReleaseQT = async (buildDir: string) => {
 export default {
   initialize(name: string) {
     const config = {
-      applicationName: null,
+      name: null,
     };
     const template = path.resolve(__dirname, "../../template/win32");
     const userTemplate = path.resolve(outputDir, "win32");

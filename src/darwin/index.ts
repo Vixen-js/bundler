@@ -22,7 +22,7 @@ export default {
 
     fs.cpSync(template, appTemplate, { recursive: true });
     const config = {
-      applicationName: name,
+      name,
     };
     fs.writeFileSync(configFile, JSON.stringify(config), {
       encoding: "utf8",

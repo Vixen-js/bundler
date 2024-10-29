@@ -94,12 +94,12 @@ export async function runMacDeployQt({
 }
 
 export function fixupTemplateApp(
-  config: { applicationName: string },
+  config: { name: string },
   templateAppPath: string
 ) {
   const infoPlistPath = path.resolve(templateAppPath, "Contents", "Info.plist");
   const infoPlist = fs.readFileSync(infoPlistPath, { encoding: "utf-8" });
   const infoPlistParsed: any = plist.parse(infoPlist);
-  infoPlistParsed.CFBundleName = config.applicationName;
+  infoPlistParsed.CFBundleName = config.name;
   fs.writeFileSync(infoPlistPath, plist.build(infoPlistParsed));
 }

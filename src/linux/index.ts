@@ -86,7 +86,7 @@ const runLinuxReleaseQT = async (buildDir: string) => {
 export default {
   initialize(name: string) {
     const config = {
-      applicationName: null,
+      name: null,
     };
     const template = path.resolve(__dirname, "../../template/linux");
     const userTemplate = path.resolve(outputDir, "linux");
