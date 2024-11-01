@@ -10,6 +10,7 @@ import {
   runMacDeployQt,
   usertemplateDir,
   buildDir,
+  copyAppIcon,
 } from "./helpers";
 
 export default {
@@ -40,6 +41,10 @@ export default {
     const Contents = path.resolve(buildPkg, "Contents");
     const MacOs = path.resolve(Contents, "MacOS");
     const Resources = path.resolve(Contents, "Resources");
+    const appIconFile = path.resolve(
+      process.cwd(),
+      "src/assets/images/AppIcon.png"
+    );
 
     console.info("🗑️  Cleaning build Dir...");
     fs.rmSync(buildDir, { recursive: true, force: true });
@@ -49,6 +54,9 @@ export default {
 
     console.info("🚢 Copying qode to build directory");
     copyQode(MacOs);
+
+    console.log("🍎 Copying AppIcon to build directory at ", appIconFile);
+    copyAppIcon(appIconFile, Resources);
 
     console.info("📬 Copying application release to build directory");
     copyAppRelease(distPath, Resources);

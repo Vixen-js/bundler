@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fiahfy/icns':
+    specifier: ^0.0.7
+    version: 0.0.7
   '@nodegui/qode':
     specifier: ^18.12.1
     version: 18.12.1
@@ -127,6 +130,19 @@ packages:
     dependencies:
       levn: 0.4.1
     dev: true
+
+  /@fiahfy/icns@0.0.7:
+    resolution: {integrity: sha512-0apAtbUXTU3Opy/Z4h69o53voBa+am8FmdZauyagUMskAVYN1a5yIRk48Sf+tEdBLlefbvqLWPJ4pxr/Y/QtTg==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@fiahfy/packbits': 0.0.6
+      pngjs: 6.0.0
+    dev: false
+
+  /@fiahfy/packbits@0.0.6:
+    resolution: {integrity: sha512-XuhF/edg+iIvXjkCWgfj6fWtRi/KrEPg2ILXj1l86EN4EssuOiPcLKgkMDr9cL8jTGtVd/MKUWW6Y0/ZVf1PGA==}
+    engines: {node: '>=8'}
+    dev: false
 
   /@humanfs/core@0.19.1:
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1348,6 +1364,11 @@ packages:
       '@xmldom/xmldom': 0.8.10
       base64-js: 1.5.1
       xmlbuilder: 15.1.1
+    dev: false
+
+  /pngjs@6.0.0:
+    resolution: {integrity: sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==}
+    engines: {node: '>=12.13.0'}
     dev: false
 
   /postcss@8.4.47:

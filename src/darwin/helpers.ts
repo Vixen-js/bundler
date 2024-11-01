@@ -7,8 +7,8 @@ import qode from "@nodegui/qode";
 //@ts-ignore
 import { qtHome } from "@vixen-js/core/config/setupQt";
 import { loadConfig } from "../utils/config";
+import { Icns, IcnsImage } from "@fiahfy/icns/dist";
 
-const cwd = process.cwd();
 const { outputDir, configFile } = loadConfig();
 
 export { outputDir, configFile };
@@ -69,7 +69,6 @@ export async function runMacDeployQt({
     `${appName}.app`,
     "-verbose=3",
     `-libpath=${qode.qtHome}`,
-    "-dmg",
     ...addonCmd(allAddons),
   ];
 
@@ -102,4 +101,15 @@ export function fixupTemplateApp(
   const infoPlistParsed: any = plist.parse(infoPlist);
   infoPlistParsed.CFBundleName = config.name;
   fs.writeFileSync(infoPlistPath, plist.build(infoPlistParsed));
+}
+
+export function copyAppIcon(iconFile: string, destinationFolder: string) {
+  if (!fs.existsSync(iconFile)) {
+    throw new Error(`AppIcon.png not found at ${iconFile}`);
+  }
+  const iconBuffer = fs.readFileSync(iconFile);
+  const image = IcnsImage.fromPNG(iconBuffer, "ic10"); // 1024 x 1024 Image PNG
+  const icns = new Icns();
+  icns.append(image);
+  fs.writeFileSync(path.resolve(destinationFolder, "AppIcon.icns"), icns.data);
 }

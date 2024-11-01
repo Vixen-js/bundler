@@ -1,6 +1,6 @@
 {
   "name": "@vixen-js/bundler",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Package bundle for Vixen JS Applications",
   "main": "./dist/main.js",
   "bin": {
@@ -36,6 +36,7 @@
     "typescript-eslint": "^8.12.2"
   },
   "dependencies": {
+    "@fiahfy/icns": "^0.0.7",
     "@nodegui/qode": "^18.12.1",
     "@vixen-js/pkg-installer": "^0.2.1",
     "commander": "^12.1.0",

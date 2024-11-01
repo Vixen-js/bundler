@@ -2,7 +2,7 @@
 Type=Application
 Name=Application
 Exec=Apprun %F
-Icon=default
+Icon=AppIcon
 Comment=Edit this file
 Terminal=true
 Categories=Utility;
