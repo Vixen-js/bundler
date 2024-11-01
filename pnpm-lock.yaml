@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^3.0.5
     version: 3.0.5
   '@vixen-js/core':
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: ^0.1.3
+    version: 0.1.3
   eslint:
     specifier: ^9.13.0
     version: 9.13.0
@@ -373,8 +373,8 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@vixen-js/core@0.1.0:
-    resolution: {integrity: sha512-b5K4TTVBW84Pc4wLF2edKWHssDYh7NhhDNoaq5GRlPI+AaCmS46i5U+ayu2om2YLERR9J06MfOyuouwOOx8+jA==}
+  /@vixen-js/core@0.1.3:
+    resolution: {integrity: sha512-Eu/L6utVETFXHKLzBqRUc1RAz7MrtEdmvJWIvTxPaKV3iPjgCIG/XUQ9lyGB/GAGZxg2RF1+Z6fAU8Ua7SLmIA==}
     engines: {node: '>=18.12.x'}
     hasBin: true
     requiresBuild: true

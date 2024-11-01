@@ -18,7 +18,7 @@ const copyQode = (dest: string) => {
 };
 
 const copyApplicationRelease = (releasePath: string, resourceDir: string) => {
-  fs.cpSync(releasePath, path.resolve(resourceDir, "release"), {
+  fs.cpSync(releasePath, path.resolve(resourceDir, "dist"), {
     recursive: true,
   });
 };

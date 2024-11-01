@@ -40,7 +40,7 @@ export function copyQode(dest: string) {
 }
 
 export function copyAppRelease(distPath: string, resourceDir: string) {
-  fs.cpSync(distPath, path.resolve(resourceDir, "release"), {
+  fs.cpSync(distPath, path.resolve(resourceDir, "dist"), {
     recursive: true,
   });
 }
@@ -62,7 +62,7 @@ export async function runMacDeployQt({
   } catch (err) {
     console.warn(`Warning: Tried to fix permission for macdeployqt but failed`);
   }
-  const distPath = path.resolve(resourceDir, "release");
+  const distPath = path.resolve(resourceDir, "dist");
   const allAddons = getAllNodeAddons(distPath);
 
   const options = [
